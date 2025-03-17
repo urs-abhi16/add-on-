@@ -1,0 +1,42 @@
+Multi dimensional  type (1)
+class Main {
+    public static void main(String[] args) {
+    int arr[][]={{1,3,5,6,7},{2,4,7,8,9}};
+ for(int i=0;i<arr.length;i++)
+    for(int j=0;j<arr[i].length;j++){
+     System.out.println(arr[i][j]);
+        
+    }
+    }
+}
+
+
+type(2)
+class Main {
+    public static void main(String[] args) {
+    int arr[][]={{1,3,5,6,7},{2,4,7,8,9}};
+ for(int i=0;i<arr.length;i++){
+    for(int j=0;j<arr[i].length;j++){
+     System.out.print(arr[i][j]+"  ");
+        
+    }
+    System.out.println("  ");
+    }
+}
+}
+
+
+Single dimensional :
+class Main {
+    public static void main(String[] args) {
+    int arr[]={1,3,5,6,7};
+    int sum=0;
+    int count=0;
+    for(int i=0;i<arr.length;i++){
+        sum += arr[i];
+          count++
+        System.out.println(sum);
+        System.out.println("count is"+count);
+    }
+    }
+}
