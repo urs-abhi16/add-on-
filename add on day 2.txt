@@ -1,0 +1,267 @@
+String is the type of objects that can store the sequence of characters enclosed by double quotes
+difference :
+ 
+declaring  a string :
+2ways
+1) String str1="hello';
+2) String str1=new String("write");
+
+
+s1.equals(s2); this will make 2 strings to check whther they are equal or not.
+
+STRING TO BE USED SECURED>>>
+
+
+
+normal string will be stored nin string pool allow duplicate .. faster
+using new keyword wil be stored in heap memory..slower no duplicate
+
+
+for example :
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s1 = "knowledge";
+        String s2 = new String("knowledge");            
+        System.out.println((s1.equals(s2)));   
+    }
+}
+
+
+output: true
+
+
+
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner  a =new Scanner(System.in);
+        System.out.println("ENTER THE NAME:");
+        String s1 = a.nextLine();
+        String s2 = new String(a.nextLine());            
+        System.out.println((s1.equals(s2)));   
+    }
+}
+
+output:
+ENTER THE NAME:
+abhi
+abhi
+true
+
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner  a =new Scanner(System.in);
+        System.out.println("ENTER THE NAME:");
+        String t= a.nextLine();
+         System.out.println("ENTER THE NAME:");
+        String s1 = a.nextLine();
+         System.out.println("ENTER THE NAME:");
+        String s2 = new String(a.nextLine());            
+        System.out.println((t.equals(s1)&&t.equals(s2)));   
+    }
+}
+
+
+
+
+reverse the string
+import java.util.*; 
+class Main {
+    public static void main(String[] args) {
+    String d="ABHINAV";
+    for(int i=d.length()-1;i>=0;i--)
+      System.out.println(d.charAt(i));
+    }
+}
+output
+v
+a
+n
+i
+h
+b
+a
+
+
+common string methods 
+
+Java String substring() Method
+substring() method of String class returns a substring from the given string
+
+
+public class s {
+
+    public static void main(String[] args)
+    {
+
+        String str = "ABHINAV";
+        String substr = str.substring(1);
+        System.out.println("SUBSTRING IS: " + substr);
+    }
+}
+
+
+output:
+SUBSTRING IS: BHINAV
+
+Java String indexOf() Method
+the String indexOf() method returns the position of the first occurrence of the specified character or string in a specified string
+
+
+
+public class Index1 {
+  
+    public static void main(String args[]) {
+      
+        String s = new String(" java program");
+
+        System.out.print("Found g first at position: ");
+
+        System.out.println(s.indexOf('g'));
+    }
+}
+output:
+Found g first at position: 9
+
+
+
+equalsIgnoreCase:
+public class Index1 {
+  
+    public static void main(String args[]) {
+      
+        String s = " Java";
+        String s1= "java";
+        //System.out.print("Found g first at position: ");//
+
+        System.out.println(s.equalsIgnoreCase(s1));
+    }
+}
+
+output:
+false
+
+
+public class Index1 {
+  
+    public static void main(String args[]) {
+      
+        String s = "                 Java";
+        String s1= "java";
+        System.out.println(s);
+
+        System.out.println(s.trim());
+    }
+}
+
+output
+                 Java
+Java
+
+intern():
+public class Index1 {
+  
+    public static void main(String args[]) {
+      
+        String s = "                 Java";
+        String s1= "java";
+        System.out.println(s);
+
+        String s3=s.intern();
+        System.out.println(s1==s3);
+        System.out.println(s==s3);
+    }
+}
+ 
+output:
+                 Java
+false
+true
+
+wrpper cls cane be able to convert primitive type to normal txt objects
+
+
+Integer.parseInt()..
+used to convert char as int
+
+
+public class Index1 {
+  
+    public static void main(String args[]) {
+     String str="123,456,789";
+     String[] arr=str.split(",");
+     int max=0;
+     for(int i=0;i<arr.length;i++) 
+       {
+           if(Integer.parseInt(arr[i])>max){
+               max=Integer.parseInt(arr[i]);
+           }
+       }    
+     System.out.println("max: "+max);
+     }
+}
+
+output:
+max: 789
+
+
+IMPORTANT METHODS IN STRINGBUFFER
+:APPEND(string)
+:INSERT(int offset,String str)
+:REVERSE()
+:REPLACE(st,end,String)
+
+
+
+diff  btw stringbuffr and string builder is
+stringbuffer-syncronize,thread safety ,optimised
+stringbuilder-asyncronise,any time crashed,not thread safety
+
+
+Mutable -change 
+immutable-no change
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)length()
+    number of words in a program
+  
